@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'pm-products',
+    selector: 'mpm-products',
     templateUrl: './products-list.component.html'
 })
 
