@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
+import { filter } from 'minimatch';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -21,6 +22,7 @@ export class ProductListComponent implements OnInit {
 
   set listFilter(value: string) {
     this._listFilter = value;
+    this.filteredProducts = this.listFilter ? this.preformFilter(this.listFilter) : this.products;
   }
 
   filteredProducts: IProduct[];
@@ -46,6 +48,18 @@ export class ProductListComponent implements OnInit {
       'imageURL': 'https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png'
     },
   ];
+
+  constructor() {
+    this.filteredProducts = this.products;
+    this.listFilter = 'cart';
+  }
+
+  preformFilter(filterBy: string): IProduct[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.products.filter((product: IProduct) =>
+      product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+  }
+
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
