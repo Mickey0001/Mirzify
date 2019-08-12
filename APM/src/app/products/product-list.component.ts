@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
 
 @Component({
     // tslint:disable-next-line: component-selector
     selector: 'mpm-products',
-    templateUrl: './products-list.component.html'
+    templateUrl: './products-list.component.html',
+    styleUrls: ['./product-list.component.css']
 })
 
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
     pageTitle = 'Product list test';
     imageWidth = 50;
     imageMargin = 2;
