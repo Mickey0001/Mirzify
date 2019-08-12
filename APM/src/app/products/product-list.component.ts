@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
-import { filter } from 'minimatch';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -35,7 +34,7 @@ export class ProductListComponent implements OnInit {
       'description': 'Leaf rake with 48-inch wooden handle.',
       'price': 19.95,
       'starRating': 3.2,
-      'imageURL': 'https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png'
+      'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png'
     },
     {
       'productID': 2,
@@ -45,7 +44,7 @@ export class ProductListComponent implements OnInit {
       'description': '15 gallon capacity rolling garden cart',
       'price': 32.99,
       'starRating': 4.2,
-      'imageURL': 'https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png'
+      'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png'
     },
   ];
 
