@@ -9,7 +9,6 @@ import { IProduct } from './product';
   providedIn: 'root'
 })
 
-
 export class ProductsService {
   private productURL = 'api/products/products.json';
 
