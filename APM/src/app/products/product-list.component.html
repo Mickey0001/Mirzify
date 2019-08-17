@@ -22,16 +22,16 @@
         <thead>
           <tr>
             <th>
-              <button class='btn btn-primary'
+              <button class='btn btn-success'
                       (click)='toggleImage()'>
                 {{showImage ? 'Hide' : 'Show'}} Image
               </button>
             </th>
-            <th>Product</th>
-            <th>Code</th>
+            <th>City</th>
+            <th>Description</th>
             <th>Available</th>
             <th>Price</th>
-            <th>5 Star Rating</th>
+            <th>Rating</th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +48,7 @@
                 {{ product.productName }}
               </a>
             </td>
-            <td>{{ product.productCode | lowercase | convertToSpaces: '-' }}</td>
+            <td>{{ product.description | lowercase | convertToSpaces: '-' }}</td>
             <td>{{ product.releaseDate }}</td>
             <td>{{ product.price | currency:'USD':'symbol':'1.2-2'}}</td>
             <td>
