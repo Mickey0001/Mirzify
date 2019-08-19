@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'pm-root',
+  selector: 'burek-root',
   template: `
     <nav class='navbar navbar-expand navbar-dark bg-dark'>
         <a class='navbar-brand'>
